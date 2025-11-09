@@ -1,0 +1,24 @@
+name: Auto Tweet Bot
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # مرة يومياً الساعة 9 صباحاً
+  workflow_dispatch:
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run bot
+        run: node twitter-post.js
