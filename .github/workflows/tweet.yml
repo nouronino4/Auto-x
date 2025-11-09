@@ -2,7 +2,8 @@ name: Auto Tweet Bot
 
 on:
   schedule:
-    - cron: '0 9 * * *' # مرة يومياً الساعة 9 صباحاً
+    #- cron: '0 9 * * *' # مرة يومياً الساعة 9 صباحاً
+  - cron: '*/5 * * * *' # ⏰ 
   workflow_dispatch:
 
 jobs:
