@@ -1,0 +1,13 @@
+{
+  "name": "auto-twitter-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "twitter-post.js",
+  "scripts": {
+    "start": "node twitter-post.js"
+  },
+  "dependencies": {
+    "twitter-api-v2": "^1.17.0",
+    "dotenv": "^16.4.5"
+  }
+}
